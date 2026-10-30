@@ -1,0 +1,196 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.paypal-logo-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-link-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #001435;
+  border-radius: 24px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #f5f7fa;
+}
+
+.chevron-icon {
+  margin-top: 1px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-login {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #001435;
+  background-color: transparent;
+  border: 1.5px solid #cbd2d6;
+  border-radius: 24px;
+  transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: #f5f7fa;
+  border-color: #001435;
+}
+
+.btn-signup {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #001435;
+  border: 1.5px solid #001435;
+  border-radius: 24px;
+  transition: all 0.2s ease;
+}
+
+.btn-signup:hover {
+  background-color: #003087;
+  border-color: #003087;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  padding: 8px;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #001435;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #001435;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -7px;
+}
+
+.hamburger::after {
+  top: 7px;
+}
+
+.hamburger.open {
+  background-color: transparent;
+}
+
+.hamburger.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+  padding: 16px 32px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #001435;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
